@@ -1,0 +1,679 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Assignment 2",
+		"_postman_id": "1e1ab7b9-acab-49f1-2ba8-0f517cc6a934",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://dcaldwel2002-test.apigee.net/hw2/get",
+			"request": {
+				"url": "http://dcaldwel2002-test.apigee.net/hw2/get",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "/get"
+			},
+			"response": [
+				{
+					"id": "8eb162cf-9838-4ac7-b30e-0aa0cc2a99bd",
+					"name": "get",
+					"originalRequest": {
+						"url": "http://dcaldwel2002-test.apigee.net/hw2/get",
+						"method": "GET",
+						"header": [],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "7",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 Mar 2017 23:09:30 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"7-upJ3/ExhkPuHWtj5zuhI26aZk38\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "Server",
+							"value": "Apigee Router",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 191,
+					"body": "\"Hello\""
+				}
+			]
+		},
+		{
+			"name": "http://dcaldwel2002-test.apigee.net/hw2/get",
+			"request": {
+				"url": "http://dcaldwel2002-test.apigee.net/hw2/get",
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"description": "/put failure "
+			},
+			"response": [
+				{
+					"id": "f1845cd0-98b4-48bd-b85f-436b3b3b2fe1",
+					"name": "/put failure",
+					"originalRequest": {
+						"url": "http://dcaldwel2002-test.apigee.net/hw2/get",
+						"method": "PUT",
+						"header": [],
+						"body": {}
+					},
+					"status": "Method Not Allowed",
+					"code": 405,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Allow",
+							"value": "GET",
+							"name": "Allow",
+							"description": "Valid actions for a specified resource. To be used for a 405 Method not allowed"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "123",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 Mar 2017 23:10:04 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "Apigee Router",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 72,
+					"body": "{\"message\":\"Route defined in Swagger specification (/get) but there is no defined put operation.\",\"allowedMethods\":[\"GET\"]}"
+				}
+			]
+		},
+		{
+			"name": "http://dcaldwel2002-test.apigee.net/hw2/delete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://dcaldwel2002-test.apigee.net/hw2/delete",
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"description": "/put failure with delete"
+			},
+			"response": []
+		},
+		{
+			"name": "http://dcaldwel2002-test.apigee.net/hw2/put",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://dcaldwel2002-test.apigee.net/hw2/put",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"someRandomString\"}"
+				},
+				"description": "/put success "
+			},
+			"response": [
+				{
+					"id": "54567c5b-580b-43f6-9ae7-9896cb094298",
+					"name": "/put success",
+					"originalRequest": {
+						"url": "http://dcaldwel2002-test.apigee.net/hw2/put",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								"{",
+								"\"",
+								"n",
+								"a",
+								"m",
+								"e",
+								"\"",
+								":",
+								"\"",
+								"s",
+								"o",
+								"m",
+								"e",
+								"R",
+								"a",
+								"n",
+								"d",
+								"o",
+								"m",
+								"S",
+								"t",
+								"r",
+								"i",
+								"n",
+								"g",
+								"\"",
+								"}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "7",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 Mar 2017 23:14:07 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"7-upJ3/ExhkPuHWtj5zuhI26aZk38\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "Server",
+							"value": "Apigee Router",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 263,
+					"body": "\"Hello\""
+				}
+			]
+		},
+		{
+			"name": "http://dcaldwel2002-test.apigee.net/hw2/get",
+			"request": {
+				"url": "http://dcaldwel2002-test.apigee.net/hw2/get",
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": "/post failure with /get"
+			},
+			"response": [
+				{
+					"id": "13ce148d-5cdd-45fd-9ec8-3d9f14313e27",
+					"name": "/post failure with /get",
+					"originalRequest": {
+						"url": "http://dcaldwel2002-test.apigee.net/hw2/get",
+						"method": "POST",
+						"header": [],
+						"body": {}
+					},
+					"status": "Method Not Allowed",
+					"code": 405,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Allow",
+							"value": "GET",
+							"name": "Allow",
+							"description": "Valid actions for a specified resource. To be used for a 405 Method not allowed"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "124",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 Mar 2017 23:17:20 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "Apigee Router",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 214,
+					"body": "{\"message\":\"Route defined in Swagger specification (/get) but there is no defined post operation.\",\"allowedMethods\":[\"GET\"]}"
+				}
+			]
+		},
+		{
+			"name": "http://dcaldwel2002-test.apigee.net/hw2/post",
+			"request": {
+				"url": "http://dcaldwel2002-test.apigee.net/hw2/post",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Almostdone!!\"}"
+				},
+				"description": "/post success with /post"
+			},
+			"response": [
+				{
+					"id": "bd1c0f01-1fb7-4f92-86c3-b63c42babd64",
+					"name": "/post success with /post",
+					"originalRequest": {
+						"url": "http://dcaldwel2002-test.apigee.net/hw2/post",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								"{",
+								"\"",
+								"n",
+								"a",
+								"m",
+								"e",
+								"\"",
+								":",
+								"\"",
+								"A",
+								"l",
+								"m",
+								"o",
+								"s",
+								"t",
+								"d",
+								"o",
+								"n",
+								"e",
+								"!",
+								"!",
+								"\"",
+								"}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "7",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 Mar 2017 23:19:45 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"7-upJ3/ExhkPuHWtj5zuhI26aZk38\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "Server",
+							"value": "Apigee Router",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 272,
+					"body": "\"Hello\""
+				}
+			]
+		},
+		{
+			"name": "http://dcaldwel2002-test.apigee.net/hw2/get",
+			"request": {
+				"url": "http://dcaldwel2002-test.apigee.net/hw2/get",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Thisis kinda like GeezusH\"}"
+				},
+				"description": "/delete failure with /get"
+			},
+			"response": []
+		},
+		{
+			"name": "http://dcaldwel2002-test.apigee.net/hw2/delete",
+			"request": {
+				"url": "http://dcaldwel2002-test.apigee.net/hw2/delete",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"this is almost done\"}"
+				},
+				"description": "/delete success with /delete will return hello since function just says to tell me \"hi\" and not really delete something"
+			},
+			"response": [
+				{
+					"id": "8daf4363-7d03-4c65-888a-ccbeaa8a132b",
+					"name": "/delete success with /delete",
+					"originalRequest": {
+						"url": "http://dcaldwel2002-test.apigee.net/hw2/delete",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								"{",
+								"\"",
+								"n",
+								"a",
+								"m",
+								"e",
+								"\"",
+								":",
+								"\"",
+								"t",
+								"h",
+								"i",
+								"s",
+								" ",
+								"i",
+								"s",
+								" ",
+								"a",
+								"l",
+								"m",
+								"o",
+								"s",
+								"t",
+								" ",
+								"d",
+								"o",
+								"n",
+								"e",
+								"\"",
+								"}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "7",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 Mar 2017 23:23:38 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"7-upJ3/ExhkPuHWtj5zuhI26aZk38\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "Server",
+							"value": "Apigee Router",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 231,
+					"body": "\"Hello\""
+				}
+			]
+		}
+	]
+}
